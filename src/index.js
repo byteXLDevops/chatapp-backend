@@ -20,7 +20,15 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
+<<<<<<< HEAD
       origin: "*"
+=======
+      origin: process.env.NODE_ENV === "production"
+          ? "https://bytexl-chatapp.s3.us-east-1.amazonaws.com/dist/index.html"
+        : "http://localhost:5001",
+      credentials: true,
+    credentials: true,
+>>>>>>> 6c9a762011bb424986e5d247c622f7e1388a6ad2
   })
 );
 
