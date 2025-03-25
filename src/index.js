@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(
     cors({
       origin: process.env.NODE_ENV === "production"
-        ? "http://Chat-app-env.eba-7k3gr8pi.us-east-1.elasticbeanstalk.com"
+          ? "https://bytexl-chatapp.s3.us-east-1.amazonaws.com/dist/index.html"
         : "http://localhost:5001",
       credentials: true,
     credentials: true,
